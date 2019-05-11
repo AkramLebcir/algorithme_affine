@@ -5,7 +5,7 @@ import 'Screen3.dart';
 import 'Screen4.dart';
 import 'Screen5.dart';
 import 'Screen6.dart';
-import 'package:firebase_admob/firebase_admob.dart';
+//import 'package:firebase_admob/firebase_admob.dart';
 
 void main() => runApp(new MyApp());
 
@@ -149,9 +149,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    FirebaseAdMob.instance.initialize(appId: "ca-app-pub-8512591933405657~4936412935").then((response){
-      myBanner..load()..show(anchorOffset: 25.0,anchorType: AnchorType.top,);
-    });
+//    FirebaseAdMob.instance.initialize(appId: "ca-app-pub-8512591933405657~4936412935").then((response){
+//      myBanner..load()..show(anchorOffset: 25.0,anchorType: AnchorType.top,);
+//    });
     return new Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         elevation: 4.0,
@@ -176,24 +176,24 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
-  keywords: <String>['game', 'pubg'],
-  contentUrl: 'https://flutter.io',
-  birthday: DateTime.now(),
-  childDirected: false,
-  designedForFamilies: false,
-  gender: MobileAdGender.male, // or MobileAdGender.female, MobileAdGender.unknown
-  testDevices: <String>[], // Android emulators are considered test devices
-);
-
-BannerAd myBanner = BannerAd(
-  // Replace the testAdUnitId with an ad unit id from the AdMob dash.
-  // https://developers.google.com/admob/android/test-ads
-  // https://developers.google.com/admob/ios/test-ads
-  adUnitId: "ca-app-pub-8512591933405657/1564267848",
-  size: AdSize.smartBanner,
-  targetingInfo: targetingInfo,
-  listener: (MobileAdEvent event) {
-    print("BannerAd event is $event");
-  },
-);
+//MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
+//  keywords: <String>['game', 'pubg'],
+//  contentUrl: 'https://flutter.io',
+//  birthday: DateTime.now(),
+//  childDirected: false,
+//  designedForFamilies: false,
+//  gender: MobileAdGender.male, // or MobileAdGender.female, MobileAdGender.unknown
+//  testDevices: <String>[], // Android emulators are considered test devices
+//);
+//
+//BannerAd myBanner = BannerAd(
+//  // Replace the testAdUnitId with an ad unit id from the AdMob dash.
+//  // https://developers.google.com/admob/android/test-ads
+//  // https://developers.google.com/admob/ios/test-ads
+//  adUnitId: "ca-app-pub-8512591933405657/1564267848",
+//  size: AdSize.smartBanner,
+//  targetingInfo: targetingInfo,
+//  listener: (MobileAdEvent event) {
+//    print("BannerAd event is $event");
+//  },
+//);
